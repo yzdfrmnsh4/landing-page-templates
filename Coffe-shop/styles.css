@@ -1,0 +1,145 @@
+/* Custom CSS for enhanced coffee shop design */
+
+/* Font imports */
+.font-playfair {
+  font-family: "Playfair Display", serif;
+}
+
+.font-nunito {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Color variables */
+:root {
+  --coffee-primary: #2d5016;
+  --coffee-secondary: #1a3009;
+  --coffee-orange: #ff8c42;
+  --coffee-light: #f5f1eb;
+  --coffee-dark: #1a1a1a;
+  --coffee-white: #ffffff;
+}
+
+/* Custom button styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--coffee-orange) 0%, #e67e22 100%);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 140, 66, 0.3);
+}
+
+/* Enhanced hover effects */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navigation styles */
+#navbar.scrolled {
+  background-color: var(--coffee-primary);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Tilted section effect */
+.tilted-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.tilted-section::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(135deg, var(--coffee-primary) 0%, var(--coffee-secondary) 100%);
+  transform: skewY(-2deg);
+  transform-origin: top left;
+}
+
+/* Animation classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Utility classes */
+.text-coffee-primary {
+  color: var(--coffee-primary);
+}
+.text-coffee-secondary {
+  color: var(--coffee-secondary);
+}
+.text-coffee-orange {
+  color: var(--coffee-orange);
+}
+.text-coffee-light {
+  color: var(--coffee-light);
+}
+.text-coffee-dark {
+  color: var(--coffee-dark);
+}
+.text-coffee-white {
+  color: var(--coffee-white);
+}
+
+.bg-coffee-primary {
+  background-color: var(--coffee-primary);
+}
+.bg-coffee-secondary {
+  background-color: var(--coffee-secondary);
+}
+.bg-coffee-orange {
+  background-color: var(--coffee-orange);
+}
+.bg-coffee-light {
+  background-color: var(--coffee-light);
+}
+.bg-coffee-dark {
+  background-color: var(--coffee-dark);
+}
+.bg-coffee-white {
+  background-color: var(--coffee-white);
+}
+
+.hover\:text-coffee-orange:hover {
+  color: var(--coffee-orange);
+}
+.hover\:bg-coffee-orange:hover {
+  background-color: var(--coffee-orange);
+}
+.hover\:bg-coffee-secondary:hover {
+  background-color: var(--coffee-secondary);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .tilted-section::before {
+    transform: skewY(-1deg);
+  }
+}

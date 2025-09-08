@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop - Premium Coffee Experience</title>
+    <meta name="description" content="Discover our premium coffee collection with the finest beans and expert craftsmanship">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-nunito antialiased">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-playfair font-bold text-white">Coffee</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-white hover:text-coffee-orange transition-colors duration-300 font-montserrat font-medium">Home</a>
+                        <a href="#shop" class="text-white hover:text-coffee-orange transition-colors duration-300 font-montserrat font-medium">Shop</a>
+                        <a href="#about" class="text-white hover:text-coffee-orange transition-colors duration-300 font-montserrat font-medium">About</a>
+                        <a href="#blog" class="text-white hover:text-coffee-orange transition-colors duration-300 font-montserrat font-medium">Blog</a>
+                        <a href="#contact" class="text-white hover:text-coffee-orange transition-colors duration-300 font-montserrat font-medium">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <button class="btn-primary text-white px-6 py-2 rounded-full font-montserrat font-medium">
+                        Sign In
+                    </button>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white hover:text-coffee-orange">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-coffee-primary">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="text-white block px-3 py-2 font-montserrat">Home</a>
+                <a href="#shop" class="text-white block px-3 py-2 font-montserrat">Shop</a>
+                <a href="#about" class="text-white block px-3 py-2 font-montserrat">About</a>
+                <a href="#blog" class="text-white block px-3 py-2 font-montserrat">Blog</a>
+                <a href="#contact" class="text-white block px-3 py-2 font-montserrat">Contact</a>
+                <button class="btn-primary text-white px-6 py-2 rounded-full font-montserrat font-medium ml-3 mt-2">
+                    Sign In
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-coffee-primary overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-coffee-primary/90 to-coffee-secondary/80"></div>
+        
+        <!-- Background Images -->
+        <div class="absolute inset-0 grid grid-cols-2 gap-4 p-8">
+            <div class="relative overflow-hidden rounded-2xl">
+                <img src="https://plus.unsplash.com/premium_photo-1661757421019-c63df167ca49?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QmFyaXN0YSUyMGNyZWF0aW5nJTIwbGF0dGUlMjBhcnR8ZW58MHx8MHx8fDA%3D" alt="Barista creating latte art" class="w-full h-full object-cover">
+            </div>
+            <div class="relative overflow-hidden rounded-2xl mt-16">
+                <img src="https://images.unsplash.com/photo-1644975243576-27cf4e66b974?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29uJTIwZW5qb3lpbmclMjBjb2ZmZWV8ZW58MHwyfDB8fHww" alt="Person enjoying coffee" class="w-full h-full object-cover">
+            </div>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4 animate-on-scroll">
+            <h1 class="text-5xl md:text-7xl font-playfair font-bold text-white mb-6 leading-tight">
+                Coffee in Your Way
+            </h1>
+            <p class="text-xl md:text-2xl text-white/90 mb-8 font-nunito leading-relaxed max-w-2xl mx-auto">
+                Refresh any time with your favorite Summer flavors with energy for an extra boost.
+            </p>
+            <button class="btn-primary text-white px-8 py-4 rounded-full text-lg font-montserrat font-semibold hover-lift">
+                Shop Now
+            </button>
+        </div>
+    </section>
+
+    <!-- Productivity Section -->
+    <section class="py-20 bg-coffee-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-on-scroll">
+                    <h2 class="text-4xl md:text-5xl font-playfair font-bold text-coffee-dark mb-6">
+                        Boost Productivity With Our Coffee
+                    </h2>
+                    <p class="text-lg text-coffee-dark/80 mb-8 leading-relaxed">
+                        Boost your productivity. Refresh any time with your favorite Summer flavors with energy for an extra boost.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-coffee-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <h3 class="font-montserrat font-semibold text-coffee-dark">Premium Quality</h3>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-coffee-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                </svg>
+                            </div>
+                            <h3 class="font-montserrat font-semibold text-coffee-dark">Expert Baristas</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate-on-scroll">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1669872484166-e11b9638b50e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZXNwcmVzc298ZW58MHwyfDB8fHww" alt="Espresso" class="rounded-2xl hover-lift">
+                        <img src="https://images.unsplash.com/photo-1717161709044-2549aa9ac3c1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bGF0dGUlMjBjb2ZmZWV8ZW58MHwyfDB8fHww" alt="Latte" class="rounded-2xl hover-lift mt-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Coffee Section -->
+    <section id="menu" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-on-scroll">
+                    <div class="bg-coffee-dark text-white px-6 py-2 rounded-full inline-block mb-6">
+                        <span class="font-montserrat text-sm">Cappuccino • Espresso • Americano • Latte • Flat White</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-playfair font-bold text-coffee-dark mb-8">
+                        Our Popular Coffee
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between py-3 border-b border-coffee-light">
+                            <span class="font-montserrat font-medium text-coffee-dark">Cappuccino</span>
+                            <span class="text-coffee-orange font-semibold">$4.50</span>
+                        </div>
+                        <div class="flex items-center justify-between py-3 border-b border-coffee-light">
+                            <span class="font-montserrat font-medium text-coffee-dark">Espresso</span>
+                            <span class="text-coffee-orange font-semibold">$3.20</span>
+                        </div>
+                        <div class="flex items-center justify-between py-3 border-b border-coffee-light">
+                            <span class="font-montserrat font-medium text-coffee-dark">Americano</span>
+                            <span class="text-coffee-orange font-semibold">$3.80</span>
+                        </div>
+                        <div class="flex items-center justify-between py-3 border-b border-coffee-light">
+                            <span class="font-montserrat font-medium text-coffee-dark">Flat White</span>
+                            <span class="text-coffee-orange font-semibold">$4.20</span>
+                        </div>
+                        <div class="flex items-center justify-between py-3">
+                            <span class="font-montserrat font-medium text-coffee-dark">Iced Coffee</span>
+                            <span class="text-coffee-orange font-semibold">$3.90</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate-on-scroll">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://plus.unsplash.com/premium_photo-1723291214437-09256cff6852?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwcHVjaW5vfGVufDB8MnwwfHx8MA%3D%3D" alt="Cappuccino" class="rounded-2xl hover-lift">
+                        <img src="https://images.unsplash.com/photo-1669872484166-e11b9638b50e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YW1lcmljYW5vJTIwY29mZmVlfGVufDB8MnwwfHx8MA%3D%3D" alt="Americano" class="rounded-2xl hover-lift mt-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="tilted-section py-20 bg-coffee-primary relative">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-white mb-6">
+                    Our Menu
+                </h2>
+                <p class="text-xl text-white/90 max-w-2xl mx-auto">
+                    Explore our carefully curated selection of premium coffee beverages
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Menu Item 1 -->
+                <div class="bg-white rounded-2xl p-6 hover-lift animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1611691934391-5a8805e0bd1a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZXNwcmVzc298ZW58MHwyfDB8fHww" alt="Espresso" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="text-xl font-playfair font-semibold text-coffee-dark mb-2">Espresso</h3>
+                    <p class="text-coffee-dark/70 mb-4">Rich and bold espresso shot</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-coffee-orange">$3.20</span>
+                        <button class="bg-coffee-primary text-white px-4 py-2 rounded-full hover:bg-coffee-secondary transition-colors">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 2 -->
+                <div class="bg-white rounded-2xl p-6 hover-lift animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1710173472469-9d28e977914c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FwcHVjaW5vfGVufDB8MnwwfHx8MA%3D%3D" alt="Cappuccino" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="text-xl font-playfair font-semibold text-coffee-dark mb-2">Cappuccino</h3>
+                    <p class="text-coffee-dark/70 mb-4">Perfect balance of espresso and steamed milk</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-coffee-orange">$4.50</span>
+                        <button class="bg-coffee-primary text-white px-4 py-2 rounded-full hover:bg-coffee-secondary transition-colors">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 3 -->
+                <div class="bg-white rounded-2xl p-6 hover-lift animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1630021439100-74a32ab42d3e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGF0dGV8ZW58MHwyfDB8fHww" alt="Latte" class="w-full h-48 object-cover rounded-xl mb-4">
+                    <h3 class="text-xl font-playfair font-semibold text-coffee-dark mb-2">Latte</h3>
+                    <p class="text-coffee-dark/70 mb-4">Smooth espresso with steamed milk and foam art</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-coffee-orange">$4.80</span>
+                        <button class="bg-coffee-primary text-white px-4 py-2 rounded-full hover:bg-coffee-secondary transition-colors">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-coffee-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-3xl font-playfair font-bold mb-4">Coffee</h3>
+                    <p class="text-white/80 mb-6 leading-relaxed">
+                        Experience the finest coffee crafted with passion and expertise. 
+                        Every cup tells a story of quality and dedication.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-coffee-primary rounded-full flex items-center justify-center hover:bg-coffee-orange transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-coffee-primary rounded-full flex items-center justify-center hover:bg-coffee-orange transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-coffee-primary rounded-full flex items-center justify-center hover:bg-coffee-orange transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-montserrat font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-white/80 hover:text-coffee-orange transition-colors">Home</a></li>
+                        <li><a href="#shop" class="text-white/80 hover:text-coffee-orange transition-colors">Shop</a></li>
+                        <li><a href="#about" class="text-white/80 hover:text-coffee-orange transition-colors">About</a></li>
+                        <li><a href="#blog" class="text-white/80 hover:text-coffee-orange transition-colors">Blog</a></li>
+                        <li><a href="#contact" class="text-white/80 hover:text-coffee-orange transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-montserrat font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-white/80">
+                        <p>123 Coffee Street</p>
+                        <p>City, State 12345</p>
+                        <p>Phone: (555) 123-4567</p>
+                        <p>Email: hello@coffee.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 mt-12 pt-8 text-center">
+                <p class="text-white/60">&copy; 2024 Coffee Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
